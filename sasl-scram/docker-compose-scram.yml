@@ -148,7 +148,6 @@ services:
         -Dzookeeper.sasl.clientconfig=Client
         -Djava.security.auth.login.config=/etc/kafka/secrets/conf/kafka_server_jaas.conf
     volumes:
-      - ${KAFKA_SSL_SECRETS_DIR}/broker-1:/etc/kafka/secrets
       - ${KAFKA_SASL_SCRAM_SECRETS_DIR}:/etc/kafka/secrets/conf
     networks:
       - kafka-cluster-network
@@ -188,7 +187,6 @@ services:
         -Dzookeeper.sasl.clientconfig=Client
         -Djava.security.auth.login.config=/etc/kafka/secrets/conf/kafka_server_jaas.conf
     volumes:
-      - ${KAFKA_SSL_SECRETS_DIR}/broker-2:/etc/kafka/secrets
       - ${KAFKA_SASL_SCRAM_SECRETS_DIR}:/etc/kafka/secrets/conf
     networks:
       - kafka-cluster-network
@@ -228,7 +226,6 @@ services:
         -Dzookeeper.sasl.clientconfig=Client
         -Djava.security.auth.login.config=/etc/kafka/secrets/conf/kafka_server_jaas.conf
     volumes:
-      - ${KAFKA_SSL_SECRETS_DIR}/broker-3:/etc/kafka/secrets
       - ${KAFKA_SASL_SCRAM_SECRETS_DIR}:/etc/kafka/secrets/conf
     networks:
       - kafka-cluster-network
